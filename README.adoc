@@ -1,0 +1,14 @@
+= Nixos Configs
+ifdef::env-github[]
+Gavin Kondrath <78187175+gavink97@users.noreply.github.com>
+v1.0.0, 2025-06-14
+:homepage: https://github.com/gavink97/nixos
+endif::[]
+:toc:
+:toc-placement!:
+:icons: font
+
+toc::[]
+
+== installation
+requires https://github.com/gavink97/.dotfiles[.dotfiles]

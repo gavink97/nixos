@@ -1,18 +1,18 @@
-{ pkgs, inputs, ... }:
-{
-    
-    nix = {
-        settings = {
-            auto-optimise-store = true;
-            experimental-features = [ "nix-command" "flakes"];
-            sandbox = true;
-        };
+{pkgs, ...}: {
+  nix = {
+    settings = {
+      auto-optimise-store = true;
+      experimental-features = ["nix-command" "flakes"];
+      sandbox = true;
     };
+  };
 
-    environment.systemPackages = with pkgs; [
-        wget
-        git
-    ];
+  environment.systemPackages = with pkgs; [
+    wget
+    git
+    playerctl
+    wev
+  ];
 
   nixpkgs.config.allowUnfree = true;
 

@@ -1,7 +1,5 @@
-{ ... }:
-{
+{...}: {
   imports = [
-    ./battery.nix
     ./bootloader.nix
     ./xserver.nix
     ./network.nix

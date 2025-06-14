@@ -1,7 +1,8 @@
-{ pkgs, ... }:
-{
-home.packages = with pkgs; [ obsidian ];
-    # pkgs.writeShellScriptBin "obsidian-wayland" ''
-    # obsidian --ozone-platform=wayland --enable-features=UseOzonePlatform,WaylandWindowDecorations
-    # ''
+{pkgs, ...}: {
+  home.packages = with pkgs; [
+    obsidian
+    (writeShellScriptBin "obsidian-wayland" ''
+      obsidian --ozone-platform=wayland --enable-features=UseOzonePlatform,WaylandWindowDecorations
+    '')
+  ];
 }

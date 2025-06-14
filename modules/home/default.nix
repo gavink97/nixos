@@ -1,5 +1,4 @@
-{ ... }:
-{
+{...}: {
   imports = [
     ./alacritty.nix
     ./discord.nix
@@ -10,10 +9,10 @@
     ./hyprland.nix
     ./keepass.nix
     ./nemo.nix
-    ./neovim.nix
     ./obsidian.nix
-    ./packages
-        # ./swaylock.nix
     ./thunderbird.nix
+
+    ./neovim
+    ./packages
   ];
 }

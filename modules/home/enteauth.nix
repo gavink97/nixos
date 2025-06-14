@@ -1,4 +1,3 @@
-{ pkgs, ... }:
-{
-    home.packages = with pkgs; [ ente-auth ];
+{pkgs, ...}: {
+  home.packages = with pkgs; [ente-auth];
 }

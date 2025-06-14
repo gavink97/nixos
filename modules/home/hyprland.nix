@@ -1,9 +1,8 @@
-{ pkgs, ... }:
-{
-    home.packages = with pkgs; [
-        hypridle
-        hyprpicker
-        hyprpaper
-        hyprcursor
-    ];
+{pkgs, ...}: {
+  home.packages = with pkgs; [
+    hypridle
+    hyprpicker
+    hyprpaper
+    hyprcursor
+  ];
 }

@@ -1,19 +1,8 @@
-{ pkgs, ... }:
-{
-    environment.systemPackages = with pkgs; [
-        greetd.tuigreet
-        seatd
-    ];
+{pkgs, ...}: {
+  environment.systemPackages = with pkgs; [
+    # hyprlock
+    hypridle
+  ];
 
-    services.greetd = {
-        enable = true;
-        settings = {
-            default_session = {
-                command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --time-format '%I:%M %p | %a • %h | %F' --cmd Hyprland";
-                user = "greeter";
-            };
-        };
-    };
-
-  services.seatd.enable = true;
+  programs.hyprlock.enable = true;
 }
