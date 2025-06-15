@@ -1,19 +1,8 @@
 {
   config,
   pkgs,
-  lib,
   ...
-}: let
-  fromGitHub = ref: repo:
-    pkgs.vimUtils.buildVimPlugin {
-      pname = "${lib.strings.sanitizeDerivationName repo}";
-      version = ref;
-      src = builtins.fetchGit {
-        url = "https://github.com/${repo}.git";
-        inherit ref;
-      };
-    };
-in {
+}: {
   programs.neovim = {
     enable = true;
     # package = pkgs.neovim-nightly;
@@ -63,22 +52,30 @@ in {
       remote-sshfs-nvim
 
       markdown-preview-nvim
-      (fromGitHub "main" "barrett-ruth/import-cost.nvim")
-      (fromGitHub "main" "tigion/nvim-asciidoc-preview")
+      # import-cost-nvim
+      # asciidoc-preview
     ];
 
     extraPackages = with pkgs; [
       gcc
+      git
 
-      xclip
+      wl-clipboard
       ripgrep
       fzf
 
       #bash
       shellcheck
+      bash-language-server
 
       #css
       csslint
+
+      #docker
+      dockerfile-language-server-nodejs
+
+      #glsl
+      glsl_analyzer
 
       #html
       superhtml
@@ -87,6 +84,7 @@ in {
       htmx-lsp
 
       #javascript
+      typescript
       vscode-langservers-extracted
       typescript-language-server
 
@@ -101,6 +99,9 @@ in {
 
       #lua
       lua-language-server
+
+      #markdown
+      marksman
 
       #rust
       rust-analyzer
@@ -118,37 +119,40 @@ in {
       deadnix
       statix
 
+      #yaml
+      yaml-language-server
+
       #zig
       zigimports
       zls
     ];
 
     extraLuaConfig = ''
-         vim.g.mapleader = " "
-         require("config.init")
+      vim.g.mapleader = " "
+      require("config.init")
 
-         require("lazy").setup({
-                 defaults = {
-                     lazy = false,
-                     version = false,
-                 },
-                 performance = {
-                 	reset_packpath = false,
-                     rpt = {
-                 	    reset = false,
-                     },
-                 },
-                 dev = {
-                 	path = "${pkgs.vimUtils.packDir config.programs.neovim.finalPackage.passthru.packpathDirs}/pack/myNeovimPackages/start",
-                 	patterns = {""},
-                 },
-                 install = {
-                	    missing = false,
-                 },
-                 spec = {
-                     { import = "plugins" },
-                 },
-      })
+      require("lazy").setup({
+              defaults = {
+                  lazy = false,
+                  version = false,
+              },
+              performance = {
+              	reset_packpath = false,
+                  rpt = {
+              	    reset = false,
+                  },
+              },
+              dev = {
+              	path = "${pkgs.vimUtils.packDir config.programs.neovim.finalPackage.passthru.packpathDirs}/pack/myNeovimPackages/start",
+              	patterns = {""},
+              },
+              install = {
+             	    missing = false,
+              },
+              spec = {
+                   { import = "plugins" },
+             },
+         })
     '';
   };
 

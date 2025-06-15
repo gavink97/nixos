@@ -6,12 +6,16 @@
     ansible
     pre-commit
     commitlint-rs
+    tmux
+    esbuild
+    cacert
 
     docker
     docker-compose
 
     #lua
     lua
+    luaformatter
 
     #python
     python312
@@ -24,6 +28,7 @@
     alejandra
     deadnix
     statix
+    nix-prefetch-github
 
     #golang
     air

@@ -9,6 +9,8 @@
     nameservers = [
       "1.1.1.1"
       "1.0.0.1"
+      "8.8.8.8"
+      "8.8.4.4"
     ];
     firewall = {
       enable = true;
@@ -21,15 +23,6 @@
 
   environment.systemPackages = with pkgs; [
     mullvad-vpn
-    iwgtk
-    gtk4
-    qrencode
-    adwaita-icon-theme
-
-    (writeShellScriptBin "iwgtk-wrapped" ''
-      export WAYLAND_DISPLAY=wayland-0
-      exec ${iwgtk}/bin/iwgtk "$@"
-    '')
   ];
 
   services.mullvad-vpn = {

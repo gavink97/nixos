@@ -42,7 +42,7 @@ return {
                 }
             })
 
-            lspconfig.html.setup({
+            lspconfig.superhtml.setup({
                 on_attach = on_attach,
                 capabilities = capabilities,
                 filetypes = { "html", "templ" },
@@ -68,13 +68,26 @@ return {
                 init_options = { userLanguages = { templ = "html" } },
             })
 
+            lspconfig.ts_ls.setup({
+                on_attach = on_attach,
+                capabilities = capabilities,
+                filetypes = { "typescript", "typescriptreact" },
+            })
+
             for _, server in ipairs({
+                "bashls",
                 "cssls",
+                "dockerls",
+                "glsl_analyzer",
                 "gopls",
-                "ts_ls",
+                "jsonls",
                 "rust_analyzer",
                 "pylsp",
-                "nil_ls"
+                "marksman",
+                "nil_ls",
+                "sourcekit",
+                "yamlls",
+                "zls"
             }) do
                 lspconfig[server].setup({
                     on_attach = on_attach,
