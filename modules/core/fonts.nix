@@ -5,5 +5,6 @@
     nerd-fonts.fira-mono
     nerd-fonts.droid-sans-mono
     liberation_ttf
+    baekmuk-ttf
   ];
 }

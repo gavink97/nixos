@@ -9,5 +9,13 @@
     swaynotificationcenter
     rofi-wayland
     blueberry
+
+    mate.caja
+    mate.atril
+    mate.mate-calc
+    mate.eom
+    mate.libmatekbd
+    resources
+    font-manager
   ];
 }

@@ -1,8 +1,19 @@
 {
   config,
   pkgs,
+  lib,
   ...
-}: {
+}: let
+  fromGitHub = ref: repo:
+    pkgs.vimUtils.buildVimPlugin {
+      pname = "${lib.strings.sanitizeDerivationName repo}";
+      version = ref;
+      src = builtins.fetchGit {
+        url = "https://github.com/${repo}.git";
+        ref = ref;
+      };
+    };
+in {
   programs.neovim = {
     enable = true;
     # package = pkgs.neovim-nightly;
@@ -52,8 +63,10 @@
       remote-sshfs-nvim
 
       markdown-preview-nvim
-      # import-cost-nvim
-      # asciidoc-preview
+
+      # handle build requirements
+      (fromGitHub "main" "barrett-ruth/import-cost.nvim")
+      (fromGitHub "main" "tigion/nvim-asciidoc-preview")
     ];
 
     extraPackages = with pkgs; [

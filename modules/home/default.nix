@@ -4,7 +4,7 @@
     ./discord.nix
     ./enteauth.nix
     ./fastfetch.nix
-    ./firefox.nix
+    ./browsers.nix
     ./gtk.nix
     ./hyprland.nix
     ./keepass.nix

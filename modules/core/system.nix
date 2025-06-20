@@ -14,7 +14,9 @@
     wev
   ];
 
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config = {
+    allowUnfree = true;
+  };
 
   time.timeZone = "Australia/Sydney";
   i18n.defaultLocale = "en_US.UTF-8";

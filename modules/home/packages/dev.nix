@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     gcc
+    gnumake
 
     #dev tools
     ansible
@@ -16,6 +17,9 @@
     #lua
     lua
     luaformatter
+
+    #ruby
+    ruby
 
     #python
     python312

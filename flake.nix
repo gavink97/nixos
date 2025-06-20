@@ -13,6 +13,8 @@
       url = "github:nix-community/nixos-apple-silicon";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
   };
 
   outputs = {
@@ -26,14 +28,15 @@
 
     inherit (nixpkgs) lib;
   in {
-    nixosConfigurations.default = nixpkgs.lib.nixosSystem {
-      inherit system;
+    nixosConfigurations.${host} = nixpkgs.lib.nixosSystem {
+      # inherit system;
       specialArgs = {
         inherit
           self
           inputs
           username
           host
+          system
           ;
       };
       modules = [

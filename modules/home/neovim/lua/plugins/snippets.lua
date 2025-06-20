@@ -1,8 +1,9 @@
 return {
     {
         "luasnip",
-        dev = true,
+        --dev = true,
         dependencies = { "rafamadriz/friendly-snippets" },
+        -- this is really laggy
         config = function()
             local ls = require("luasnip")
             ls.filetype_extend("python", { "pydoc" })

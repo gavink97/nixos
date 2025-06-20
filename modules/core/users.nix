@@ -4,6 +4,7 @@
   username,
   host,
   pkgs-nvim,
+  system,
   ...
 }: {
   imports = [inputs.home-manager.nixosModules.home-manager];
@@ -11,7 +12,7 @@
   home-manager = {
     useUserPackages = true;
     useGlobalPkgs = true;
-    extraSpecialArgs = {inherit inputs username host pkgs-nvim;};
+    extraSpecialArgs = {inherit inputs username host pkgs-nvim system;};
     users.${username} = {
       imports = [./../home];
       home = {
