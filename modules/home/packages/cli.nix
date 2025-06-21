@@ -19,5 +19,6 @@
     bc
     cron
     lsof
+    kbd
   ];
 }

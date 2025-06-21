@@ -2,6 +2,7 @@
   home.packages = with pkgs; [
     gcc
     gnumake
+    devenv
 
     #dev tools
     ansible
@@ -38,6 +39,7 @@
     air
     go
     golangci-lint
+    goimports-reviser
     templ
 
     #rust
