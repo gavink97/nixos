@@ -6,6 +6,7 @@
 
     #dev tools
     ansible
+    playwright-driver.browsers
     pre-commit
     commitlint-rs
     tmux
@@ -14,6 +15,7 @@
 
     docker
     docker-compose
+    docker-buildx
 
     #lua
     lua
@@ -33,7 +35,6 @@
     alejandra
     deadnix
     statix
-    nix-prefetch-github
 
     #golang
     air

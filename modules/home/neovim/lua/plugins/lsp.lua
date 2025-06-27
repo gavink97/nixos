@@ -33,10 +33,11 @@ return {
                         runtime = { version = "LuaJIT" },
                         diagnostics = {
                             globals = {
-                            "vim",
-                            "on_attach",
-                            "capabilities",
-                            "opts "}
+                                "vim",
+                                "on_attach",
+                                "capabilities",
+                                "opts ",
+                            }
                         }
                     }
                 }

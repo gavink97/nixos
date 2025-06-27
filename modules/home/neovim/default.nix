@@ -39,6 +39,7 @@ in {
 
       lualine-nvim
 
+      neoformat
       nvim-lspconfig
       nvim-cmp
       cmp-buffer
@@ -97,21 +98,26 @@ in {
       htmx-lsp
 
       #javascript
+      biome
       typescript
       vscode-langservers-extracted
       typescript-language-server
 
       #python
+      yapf
       python313Packages.python-lsp-server
 
       #golang
-      gopls
       goimports-reviser
-      golines
+      gopls
+      gotools
+      golangci-lint
       templ
 
       #lua
       lua-language-server
+      luaformatter
+      luajitPackages.luacheck
 
       #markdown
       marksman
@@ -136,6 +142,7 @@ in {
       yaml-language-server
 
       #zig
+      zig
       zigimports
       zls
     ];
@@ -169,8 +176,17 @@ in {
     '';
   };
 
-  xdg.configFile."nvim/lua" = {
-    recursive = true;
-    source = ./lua;
+  xdg = {
+    configFile."nvim/lua" = {
+      recursive = true;
+      source = ./lua;
+    };
+    desktopEntries = {
+      nvim = {
+        name = "Neovim";
+        type = "Application";
+        noDisplay = true;
+      };
+    };
   };
 }
