@@ -13,13 +13,16 @@
     esbuild
     cacert
 
+    #asciidoc
+    asciidoctor
+
+    # docker
     docker
     docker-compose
     docker-buildx
 
     #lua
     lua
-    luaformatter
 
     #ruby
     ruby
@@ -32,7 +35,6 @@
     biome
 
     #nix
-    alejandra
     deadnix
     statix
 

@@ -1,19 +1,9 @@
 return {
-    {
-        "sainnhe/everforest",
-    },
-
-    {
-        "ThePrimeagen/vim-be-good",
-    },
-
-    {
-        "christoomey/vim-tmux-navigator",
-    },
-    {
+    {"sainnhe/everforest"}, -- {"ThePrimeagen/vim-be-good",},
+    {"christoomey/vim-tmux-navigator"}, {
         "tigion/nvim-asciidoc-preview",
         dev = true,
-        cmd = { "AsciiDocPreview" },
-        ft = { "asciidoc" }
-    },
+        cmd = {"AsciiDocPreview"},
+        ft = {"asciidoc"}
+    }
 }

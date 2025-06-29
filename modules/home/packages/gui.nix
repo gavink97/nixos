@@ -6,6 +6,7 @@
     wlogout
     waybar
     swaynotificationcenter
+    libnotify
     rofi-wayland
     blueberry
     btop

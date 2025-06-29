@@ -40,6 +40,8 @@ in {
       lualine-nvim
 
       neoformat
+      nvim-lint
+
       nvim-lspconfig
       nvim-cmp
       cmp-buffer
@@ -50,16 +52,16 @@ in {
       luasnip
       friendly-snippets
       fidget-nvim
-      neogen
+      #neogen
       vim-nix
 
       nvim-web-devicons
       undotree
       vim-fugitive
 
-      vim-be-good
+      #vim-be-good
       plenary-nvim
-      harpoon2
+      #harpoon2
 
       remote-sshfs-nvim
 
@@ -67,34 +69,38 @@ in {
 
       # handle build requirements
       (fromGitHub "main" "barrett-ruth/import-cost.nvim")
-      (fromGitHub "main" "tigion/nvim-asciidoc-preview")
+      # (fromGitHub "main" "tigion/nvim-asciidoc-preview")
     ];
 
     extraPackages = with pkgs; [
       gcc
       git
+      topiary
 
       wl-clipboard
       ripgrep
       fzf
+      nodePackages.alex
 
       #bash
       shellcheck
       bash-language-server
 
       #css
-      csslint
+      stylelint
 
       #docker
       dockerfile-language-server-nodejs
+      docker-compose-language-service
 
       #glsl
       glsl_analyzer
 
       #html
-      superhtml
+      htmlhint
 
       #htmx
+      prettierd
       htmx-lsp
 
       #javascript
@@ -105,6 +111,8 @@ in {
 
       #python
       yapf
+      python313Packages.flake8
+      python313Packages.mypy
       python313Packages.python-lsp-server
 
       #golang
@@ -126,7 +134,11 @@ in {
       rust-analyzer
       rustfmt
 
+      #sql
+      sqls
+
       #swift
+      swiftformat
       sourcekit-lsp
 
       #tailwindcss
@@ -137,6 +149,9 @@ in {
       alejandra
       deadnix
       statix
+
+      #vim
+      vim-language-server
 
       #yaml
       yaml-language-server
