@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  version,
+  ...
+}: {
   nix = {
     settings = {
       auto-optimise-store = true;
@@ -19,7 +23,14 @@
   };
 
   time.timeZone = "Australia/Sydney";
-  i18n.defaultLocale = "en_US.UTF-8";
-  system.stateVersion = "25.05";
+  i18n = {
+    defaultLocale = "en_US.UTF-8";
+    inputMethod = {
+      enable = true;
+      type = "kime";
+      kime.iconColor = "White";
+    };
+  };
+  system.stateVersion = version;
   # system.copySystemConfiguration = true;
 }

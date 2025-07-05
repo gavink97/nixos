@@ -3,7 +3,7 @@
     ./alacritty.nix
     ./discord.nix
     ./enteauth.nix
-    ./fastfetch.nix
+    # ./fastfetch.nix
     ./browsers.nix
     ./gtk.nix
     ./hyprland.nix

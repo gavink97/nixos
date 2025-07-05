@@ -44,6 +44,7 @@
     golangci-lint
     goimports-reviser
     templ
+    delve
 
     #rust
     rustc
@@ -51,5 +52,6 @@
 
     #ziglang
     zig
+    lldb
   ];
 }

@@ -15,7 +15,6 @@
     direnv
     fzf
     sshfs
-    yazi
     bc
     cron
     lsof

@@ -25,6 +25,7 @@
     username = "gavin";
     host = "nixos";
     system = "aarch64-linux";
+    version = "25.05";
 
     inherit (nixpkgs) lib;
   in {
@@ -37,6 +38,7 @@
           username
           host
           system
+          version
           ;
       };
       modules = [

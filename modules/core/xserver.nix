@@ -5,10 +5,6 @@
       excludePackages = with pkgs; [
         xterm
       ];
-      xkb = {
-        layout = "us";
-        variant = "";
-      };
       displayManager = {
         gdm.enable = true;
       };

@@ -11,7 +11,7 @@
   environment.systemPackages = with pkgs; [
     pulseaudioFull
     jack2
-    carla
-    qjackctl
+    #carla
+    #qjackctl
   ];
 }

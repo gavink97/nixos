@@ -5,6 +5,7 @@
   host,
   pkgs-nvim,
   system,
+  version,
   ...
 }: {
   imports = [inputs.home-manager.nixosModules.home-manager];
@@ -18,7 +19,7 @@
       home = {
         username = "${username}";
         homeDirectory = "/home/${username}";
-        stateVersion = "25.05";
+        stateVersion = version;
       };
       programs.home-manager.enable = true;
     };

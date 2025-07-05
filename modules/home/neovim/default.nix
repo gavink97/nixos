@@ -41,6 +41,7 @@ in {
 
       neoformat
       nvim-lint
+      nvim-dap
 
       nvim-lspconfig
       nvim-cmp
@@ -100,7 +101,7 @@ in {
       htmlhint
 
       #htmx
-      prettierd
+      #prettierd
       htmx-lsp
 
       #javascript
@@ -121,6 +122,7 @@ in {
       gotools
       golangci-lint
       templ
+      delve
 
       #lua
       lua-language-server
@@ -160,6 +162,7 @@ in {
       zig
       zigimports
       zls
+      lldb
     ];
 
     extraLuaConfig = ''
