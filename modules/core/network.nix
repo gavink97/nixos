@@ -4,6 +4,11 @@
   ...
 }: {
   networking = {
+    enableIPv6 = true;
+    dhcpcd = {
+      enable = true;
+      IPv6rs = true;
+    };
     hostName = "${host}";
     networkmanager.enable = true;
     nameservers = [
@@ -14,6 +19,7 @@
     ];
     firewall = {
       enable = true;
+      allowPing = true;
     };
     wireless.iwd = {
       enable = true;

@@ -39,7 +39,7 @@ in {
 
       lualine-nvim
 
-      neoformat
+      conform-nvim
       nvim-lint
       nvim-dap
 
@@ -76,7 +76,6 @@ in {
     extraPackages = with pkgs; [
       gcc
       git
-      topiary
 
       wl-clipboard
       ripgrep
@@ -85,6 +84,7 @@ in {
 
       #bash
       shellcheck
+      beautysh
       bash-language-server
 
       #css
@@ -101,11 +101,11 @@ in {
       htmlhint
 
       #htmx
-      #prettierd
       htmx-lsp
 
       #javascript
       biome
+      jsbeautifier
       typescript
       vscode-langservers-extracted
       typescript-language-server
@@ -125,8 +125,8 @@ in {
       delve
 
       #lua
+      stylua
       lua-language-server
-      luaformatter
       luajitPackages.luacheck
 
       #markdown
@@ -140,7 +140,7 @@ in {
       sqls
 
       #swift
-      swiftformat
+      swift
       sourcekit-lsp
 
       #tailwindcss
@@ -157,6 +157,7 @@ in {
 
       #yaml
       yaml-language-server
+      yamlfmt
 
       #zig
       zig

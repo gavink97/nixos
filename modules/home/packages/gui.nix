@@ -15,6 +15,7 @@
     adwaita-icon-theme
     morewaita-icon-theme
     obs-studio
+    protonvpn-gui
   ];
 
   xdg.desktopEntries = {

@@ -25,9 +25,10 @@ return {
                 settings = {
                     Lua = {
                         runtime = {version = "LuaJIT"},
+                        workspace = {library = {vim.env.VIMRUNTIME .. '/lua'}},
                         diagnostics = {
                             globals = {
-                                "vim", "on_attach", "capabilities", "opts "
+                                "vim", "on_attach", "capabilities", "opts"
                             }
                         }
                     }

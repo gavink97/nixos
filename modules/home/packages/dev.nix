@@ -23,6 +23,7 @@
 
     #lua
     lua
+    stylua
 
     #ruby
     ruby
@@ -49,6 +50,9 @@
     #rust
     rustc
     cargo
+
+    #swift
+    swift
 
     #ziglang
     zig
