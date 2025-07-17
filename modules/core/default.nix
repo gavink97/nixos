@@ -13,5 +13,6 @@
     ./greet.nix
     ./programs.nix
     ./fonts.nix
+    ./osd.nix
   ];
 }

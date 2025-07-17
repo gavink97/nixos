@@ -16,6 +16,7 @@
     morewaita-icon-theme
     obs-studio
     protonvpn-gui
+    vlc
   ];
 
   xdg.desktopEntries = {

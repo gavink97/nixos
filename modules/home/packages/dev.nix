@@ -16,6 +16,9 @@
     #asciidoc
     asciidoctor
 
+    #css
+    stylelint
+
     # docker
     docker
     docker-compose
