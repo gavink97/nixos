@@ -17,6 +17,8 @@
     obs-studio
     protonvpn-gui
     vlc
+    font-manager
+    #libreoffice
   ];
 
   xdg.desktopEntries = {

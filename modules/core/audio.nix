@@ -9,6 +9,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    #asahi-audio
     pulseaudioFull
     jack2
     #carla

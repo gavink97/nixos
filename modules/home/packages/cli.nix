@@ -19,5 +19,7 @@
     cron
     lsof
     kbd
+    fastfetch
+    unzip
   ];
 }

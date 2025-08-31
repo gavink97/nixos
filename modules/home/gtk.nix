@@ -5,8 +5,6 @@
   #   useXkbConfig = true; # use xkb.options in tty.
   #};
 
-  fonts.fontconfig.enable = true;
-
   gtk = {
     enable = true;
     font = {

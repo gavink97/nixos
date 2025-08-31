@@ -41,6 +41,7 @@
     #nix
     deadnix
     statix
+    nixfmt
 
     #golang
     air
@@ -48,6 +49,7 @@
     golangci-lint
     goimports-reviser
     templ
+    prettier
     delve
 
     #rust

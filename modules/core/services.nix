@@ -4,10 +4,10 @@
   ];
 
   services = {
+    dbus.enable = true;
     gnome.gnome-keyring.enable = true;
     envfs.enable = true;
-
-    logind.powerKey = "suspend";
+    logind.settings.Login.HandlePowerKey = "suspend";
   };
 
   # services.openssh.enable = true;

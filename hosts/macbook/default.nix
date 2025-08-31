@@ -9,9 +9,10 @@
   hardware = {
     asahi = {
       enable = true;
+      #extractPeripheralFirmware = false;
       peripheralFirmwareDirectory = /etc/nixos/firmware;
-      useExperimentalGPUDriver = true;
-      experimentalGPUInstallMode = "replace";
+      #useExperimentalGPUDriver = true;
+      #experimentalGPUInstallMode = "replace";
       setupAsahiSound = true;
     };
     bluetooth.enable = true;

@@ -69,8 +69,8 @@ in {
       markdown-preview-nvim
 
       # handle build requirements
-      (fromGitHub "main" "barrett-ruth/import-cost.nvim")
-      # (fromGitHub "main" "tigion/nvim-asciidoc-preview")
+      #(fromGitHub "main" "barrett-ruth/import-cost.nvim")
+      (fromGitHub "main" "tigion/nvim-asciidoc-preview")
     ];
 
     extraPackages = with pkgs; [
@@ -122,6 +122,7 @@ in {
       gotools
       golangci-lint
       templ
+      prettier
       delve
 
       #lua
